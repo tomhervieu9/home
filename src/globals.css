@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --*: initial;
+  --font-main: ui-sans-serif, system-ui, sans-serif;
+  --color-night: #121063;
+  --color-dark-green: #123422;
+  --color-other: #134063;
+}
