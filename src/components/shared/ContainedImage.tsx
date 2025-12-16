@@ -6,7 +6,7 @@ type ImageProps = {
 
 // Displays a dynamic image that expands to fit the exact size of its parent
 // while maintaining its aspect ratio.
-export const DynamicImage = (props: ImageProps) => {
+export const ContainedImage = (props: ImageProps) => {
   return (
     <div className="relative h-full w-full">
       <img

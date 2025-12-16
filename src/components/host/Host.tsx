@@ -1,8 +1,6 @@
 import hostImage from "@home/assets/portfolio-shot.png";
-import { DynamicImage } from "@home/components/shared/DynamicImage";
+import { ContainedImage } from "@home/components/shared/ContainedImage";
 
 export const Host = () => {
-  return (
-    <DynamicImage src={hostImage} alt="Profile Picture" />
-  );
+  return <ContainedImage src={hostImage} alt="Profile Picture" />;
 };

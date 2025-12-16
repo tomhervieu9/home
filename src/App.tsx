@@ -17,7 +17,7 @@ export const App = () => {
 // Layout.
 const AppLayout = (props: PropsWithChildren) => {
   return (
-    <div className="px-safe py-safe font-main tall:grid-rows-[2fr_9fr_1fr] tall:grid-cols-1 wide:grid-rows-1 wide:grid-cols-[1fr_9fr_2fr] grid h-screen w-screen bg-zinc-50 dark:bg-black">
+    <div className="px-safe py-safe font-main tall:grid-rows-[3fr_10fr_1fr] tall:grid-cols-1 wide:grid-rows-1 wide:grid-cols-[1fr_10fr_3fr] grid h-screen w-screen bg-zinc-50 dark:bg-black">
       {props.children}
     </div>
   );
@@ -26,7 +26,7 @@ const AppLayout = (props: PropsWithChildren) => {
 // Section Containers.
 const HostContainer = (props: PropsWithChildren) => {
   return (
-    <div className="bg-red tall:row-[1/2] tall:col-span-full wide:row-span-full wide:col-[3/4]">
+    <div className="bg-red tall:row-[1/2] tall:col-span-full wide:row-span-full wide:col-[3/4] overflow-hidden">
       {props.children}
     </div>
   );
@@ -34,7 +34,7 @@ const HostContainer = (props: PropsWithChildren) => {
 
 const MainContentContainer = () => {
   return (
-    <div className="bg-other tall:row-[2/3] tall:col-span-full wide:row-span-full wide:col-[2/3]">
+    <div className="bg-other tall:row-[2/3] tall:col-span-full wide:row-span-full wide:col-[2/3] overflow-hidden">
       main container
     </div>
   );
@@ -42,7 +42,7 @@ const MainContentContainer = () => {
 
 const UserPanelContainer = () => {
   return (
-    <div className="bg-dark-green tall:row-[3/4] tall:col-span-full wide:row-span-full wide:col-[1/2]">
+    <div className="bg-dark-green tall:row-[3/4] tall:col-span-full wide:row-span-full wide:col-[1/2] overflow-hidden">
       panel container
     </div>
   );
