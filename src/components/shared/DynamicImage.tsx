@@ -8,13 +8,13 @@ type ImageProps = {
 // while maintaining its aspect ratio.
 export const DynamicImage = (props: ImageProps) => {
   return (
-    <img
-      src={props.src}
-      alt={props.alt}
-      loading={props.isPriority ? "eager" : "lazy"}
-      width="100px"
-      height="100px"
-      className="object-contain"
-    />
+    <div className="relative h-full w-full">
+      <img
+        src={props.src}
+        alt={props.alt}
+        loading={props.isPriority ? "eager" : "lazy"}
+        className="absolute inset-0 h-full w-full object-contain"
+      />
+    </div>
   );
 };
