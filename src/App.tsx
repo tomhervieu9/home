@@ -1,5 +1,7 @@
 import { Host } from "@home/components/host/Host";
 import type { PropsWithChildren } from "react";
+import { ControlPanel } from "./components/control-panel/ControlPanel";
+import { MainContent } from "./components/main-content/MainContent";
 
 // Main application.
 export const App = () => {
@@ -8,8 +10,12 @@ export const App = () => {
       <HostContainer>
         <Host />
       </HostContainer>
-      <MainContentContainer />
-      <UserPanelContainer />
+      <MainContentContainer>
+        <MainContent />
+      </MainContentContainer>
+      <ControlPanelContainer>
+        <ControlPanel />
+      </ControlPanelContainer>
     </AppLayout>
   );
 };
@@ -17,7 +23,7 @@ export const App = () => {
 // Layout.
 const AppLayout = (props: PropsWithChildren) => {
   return (
-    <div className="px-safe py-safe font-main tall:grid-rows-[3fr_10fr_1fr] tall:grid-cols-1 wide:grid-rows-1 wide:grid-cols-[1fr_10fr_3fr] grid h-screen w-screen bg-zinc-50 dark:bg-black">
+    <div className="px-safe py-safe font-main tall:grid-rows-[2fr_9fr_1fr] tall:grid-cols-1 wide:grid-rows-1 wide:grid-cols-[1fr_9fr_2fr] grid h-screen w-screen bg-zinc-50 dark:bg-black">
       {props.children}
     </div>
   );
@@ -32,18 +38,18 @@ const HostContainer = (props: PropsWithChildren) => {
   );
 };
 
-const MainContentContainer = () => {
+const MainContentContainer = (props: PropsWithChildren) => {
   return (
     <div className="bg-other tall:row-[2/3] tall:col-span-full wide:row-span-full wide:col-[2/3] overflow-hidden">
-      main container
+      {props.children}
     </div>
   );
 };
 
-const UserPanelContainer = () => {
+const ControlPanelContainer = (props: PropsWithChildren) => {
   return (
     <div className="bg-dark-green tall:row-[3/4] tall:col-span-full wide:row-span-full wide:col-[1/2] overflow-hidden">
-      panel container
+      {props.children}
     </div>
   );
 };
