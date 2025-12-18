@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --*: initial;
+  /* --*: initial; */
+
+  --spacing: 0.1vmin;
 
   --font-main: ui-sans-serif, system-ui, sans-serif;
-  --color-night: #121063;
-  --color-dark-green: #123422;
-  --color-other: #134063;
-  --color-red: #ff0000;
+  --color-night: #0e0330;
+  --color-white: #e0e0e0;
 }
 
 @custom-variant tall {
