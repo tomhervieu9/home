@@ -1,8 +1,8 @@
-import { Host } from "@home/components/host/Host";
 import type { PropsWithChildren } from "react";
-import { Console } from "./components/console/Console";
-import { Panel } from "./components/main/Panel";
-import { Portfolio } from "./components/portfolio/Portfolio";
+import { Console } from "./features/console/components/Console";
+import { Host } from "./features/host/components/Host";
+import { Panel } from "./features/panels/components/Panel";
+import { Portfolio } from "./features/portfolio/components/Portfolio";
 
 // Main application.
 export const App = () => {
