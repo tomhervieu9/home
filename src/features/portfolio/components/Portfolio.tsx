@@ -1,3 +1,3 @@
 export const Portfolio = () => {
-  return <div>hello main content.</div>;
+  return <div>portfolio</div>;
 };

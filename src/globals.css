@@ -3,7 +3,7 @@
 @theme {
   /* --*: initial; */
 
-  --spacing: 0.1vmin;
+  --spacing: 0.25vmin;
 
   --font-main: ui-sans-serif, system-ui, sans-serif;
   --color-night: #0e0330;
