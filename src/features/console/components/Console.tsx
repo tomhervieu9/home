@@ -5,7 +5,7 @@ export const Console = (props: { className: string }) => {
   return (
     <div className={cn(props.className, "relative")}>
       <Panel className="absolute inset-0 -z-10" />
-      <div>hello console</div>;
+      <div>hello console</div>
     </div>
   );
 };
