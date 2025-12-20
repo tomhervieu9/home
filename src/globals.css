@@ -4,6 +4,7 @@
   /* --*: initial; */
 
   --spacing: 0.25vmin;
+  --spacing-w: 0.25vw;
 
   --font-main: ui-sans-serif, system-ui, sans-serif;
   --color-night: #0e0330;
