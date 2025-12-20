@@ -5,11 +5,16 @@ import { Narrator } from "./Narrator";
 
 export const Host = (props: { className: string }) => {
   return (
-    <div className={cn(props.className, "relative")}>
-      <Panel className="absolute inset-0 -z-10" />
-      <div className="wide:grid-rows-[2fr_1fr] wide:grid-cols-1 tall:grid-rows-1 tall:grid-cols-[2fr_1fr] grid size-full gap-8">
-        <Narrator className="wide:row-[2/3] wide:col-span-full tall:row-span-full tall:col-[2/3] overflow-hidden" />
-        <Narration className="wide:row-[1/2] wide:col-span-full tall:row-span-full tall:col-[1/2] overflow-hidden" />
+    <div className={cn(props.className, "")}>
+      <div className="wide:grid-rows-[9fr_6fr] wide:grid-cols-1 tall:grid-rows-1 tall:grid-cols-[9fr_6fr] grid size-full gap-8">
+        <div className="wide:row-[2/3] wide:col-span-full tall:row-span-full tall:col-[2/3] relative overflow-hidden">
+          <Panel className="absolute inset-0 -z-10" />
+          <Narrator />
+        </div>
+        <div className="wide:row-[1/2] wide:col-span-full tall:row-span-full tall:col-[1/2] relative overflow-hidden">
+          <Panel className="absolute inset-0 -z-10" />
+          <Narration />
+        </div>
       </div>
     </div>
   );
