@@ -1,4 +1,4 @@
-import { Panel } from "@home/features/panels/components/Panel";
+import { Panel } from "@home/features/shared/panels/components/Panel";
 import { cn } from "@home/utils/css/classNames";
 import { Narration } from "./Narration";
 import { Narrator } from "./Narrator";
