@@ -1,3 +1,11 @@
-export const Console = () => {
-  return <div>hello console</div>;
+import { Panel } from "@home/features/panels/components/Panel";
+import { cn } from "@home/utils/css/classNames";
+
+export const Console = (props: { className: string }) => {
+  return (
+    <div className={cn(props.className, "relative")}>
+      <Panel className="absolute inset-0 -z-10" />
+      <div>hello console</div>;
+    </div>
+  );
 };

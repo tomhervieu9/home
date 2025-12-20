@@ -1,6 +1,9 @@
+import { cn } from "@home/utils/css/classNames";
+
 type ImageProps = {
   src: string;
   alt: string;
+  className?: string;
   isPriority?: boolean;
 };
 
@@ -13,7 +16,10 @@ export const ContainedImage = (props: ImageProps) => {
         src={props.src}
         alt={props.alt}
         loading={props.isPriority ? "eager" : "lazy"}
-        className="absolute inset-0 size-full object-contain"
+        className={cn(
+          props.className,
+          "absolute inset-0 size-full object-contain",
+        )}
       />
     </div>
   );

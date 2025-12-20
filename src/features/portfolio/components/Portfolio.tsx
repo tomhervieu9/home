@@ -1,3 +1,11 @@
-export const Portfolio = () => {
-  return <div>portfolio</div>;
+import { Panel } from "@home/features/panels/components/Panel";
+import { cn } from "@home/utils/css/classNames";
+
+export const Portfolio = (props: { className: string }) => {
+  return (
+    <div className={cn(props.className, "relative")}>
+      <Panel className="absolute inset-0 -z-10" />
+      <div>portfolio</div>
+    </div>
+  );
 };
