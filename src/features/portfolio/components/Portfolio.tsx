@@ -1,4 +1,4 @@
-import { Panel } from "@home/features/shared/panels/components/Panel";
+import { Panel } from "@home/features/shared/components/Panel";
 import { cn } from "@home/utils/css/classNames";
 
 export const Portfolio = (props: { className: string }) => {

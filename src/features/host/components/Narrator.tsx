@@ -1,6 +1,6 @@
 import hostImage from "@home/assets/portfolio-shot.png";
+import { ContainedImage } from "@home/features/shared/components/ContainedImage";
 import { cn } from "@home/utils/css/classNames";
-import { ContainedImage } from "./ContainedImage";
 
 export const Narrator = (props: { className?: string }) => {
   return (

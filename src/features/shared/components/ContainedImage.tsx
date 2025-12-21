@@ -11,7 +11,7 @@ type ImageProps = {
 // while maintaining its aspect ratio.
 export const ContainedImage = (props: ImageProps) => {
   return (
-    <div className="relative size-full">
+    <div className={cn(props.className, "relative size-full")}>
       <img
         src={props.src}
         alt={props.alt}
