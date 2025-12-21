@@ -18,7 +18,7 @@ export const App = () => {
 // App (grid) layout.
 const GridLayout = (props: PropsWithChildren) => {
   return (
-    <div className="relative h-screen w-screen">
+    <div className="relative h-dvh w-screen">
       <Background className="size-full" />
       <div className="px-safe py-safe font-main tall:grid-rows-[2fr_9fr_1fr] tall:grid-cols-1 wide:grid-rows-1 wide:grid-cols-[1fr_9fr_2fr] grid size-full gap-8 p-8">
         {props.children}
