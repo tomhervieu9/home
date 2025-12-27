@@ -5,13 +5,11 @@ type ButtonEntryProps = {
   className?: string;
   buttonLabel: string;
   icon: string;
-  link: string;
+  alt: string;
+  onClick: () => void;
 };
 
 export const ButtonEntry = (props: ButtonEntryProps) => {
-  const openLink = () => {
-    window.open(props.link);
-  };
   return (
     <div
       className={cn(
@@ -25,9 +23,9 @@ export const ButtonEntry = (props: ButtonEntryProps) => {
       <button
         className="flex size-full items-center gap-2 rounded-lg text-white"
         type="button"
-        onClick={openLink}
+        onClick={props.onClick}
       >
-        <ContainedImage src={props.icon} alt="Github Icon" />
+        <ContainedImage src={props.icon} alt={props.alt} />
       </button>
     </div>
   );
