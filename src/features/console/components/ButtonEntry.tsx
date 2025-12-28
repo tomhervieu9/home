@@ -1,15 +1,20 @@
 import { ContainedImage } from "@home/features/shared/components/ContainedImage";
 import { cn } from "@home/utils/css/classNames";
+import type { ButtonEntryType } from "../types/ButtonEntryType";
+import { getIconForButtonEntryType } from "../utils/getIconForButtonEntryType";
 
 type ButtonEntryProps = {
   className?: string;
-  buttonLabel: string;
+  label: string;
+  type: ButtonEntryType;
   icon: string;
   alt: string;
   onClick: () => void;
 };
 
 export const ButtonEntry = (props: ButtonEntryProps) => {
+  const superscriptIcon = getIconForButtonEntryType(props.type);
+
   return (
     <div
       className={cn(
@@ -18,13 +23,18 @@ export const ButtonEntry = (props: ButtonEntryProps) => {
       )}
     >
       <div className="flex justify-center">
-        <span>{props.buttonLabel}</span>
+        <span>{props.label}</span>
       </div>
       <button
-        className="flex size-full items-center gap-2 rounded-lg text-white"
+        className="relative flex size-full items-center gap-2 rounded-lg text-white"
         type="button"
         onClick={props.onClick}
       >
+        {superscriptIcon && (
+          <div className="absolute -right-3 -bottom-3 size-4">
+            <ContainedImage src={superscriptIcon} alt={"Superscript Icon"} />
+          </div>
+        )}
         <ContainedImage src={props.icon} alt={props.alt} />
       </button>
     </div>
