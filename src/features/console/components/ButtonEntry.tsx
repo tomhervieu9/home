@@ -1,6 +1,7 @@
 import { ContainedImage } from "@home/features/shared/components/ContainedImage";
 import { cn } from "@home/utils/css/classNames";
-import type { ButtonEntryType } from "../types/ButtonEntryType";
+import { useState } from "react";
+import { ButtonEntryType } from "../types/ButtonEntryType";
 import { getIconForButtonEntryType } from "../utils/getIconForButtonEntryType";
 
 type ButtonEntryProps = {
@@ -8,18 +9,34 @@ type ButtonEntryProps = {
   label: string;
   type: ButtonEntryType;
   icon: string;
+  activeIcon?: string;
   alt: string;
   onClick: () => void;
 };
 
 export const ButtonEntry = (props: ButtonEntryProps) => {
-  const superscriptIcon = getIconForButtonEntryType(props.type);
+  const [clickReactionActive, setClickReactionActive] = useState(false);
+  const superscriptIcon = getIconForButtonEntryType(
+    props.type,
+    clickReactionActive,
+  );
+
+  // Use usecallback??
+  const handleClick = () => {
+    props.onClick();
+    if (props.type === ButtonEntryType.COPY_TEXT) {
+      setClickReactionActive(true);
+      void new Promise((resolve) => setTimeout(resolve, 1000)).then(() =>
+        setClickReactionActive(false),
+      );
+    }
+  };
 
   return (
     <div
       className={cn(
         props.className,
-        "wide:w-full tall:h-full aspect-square rounded-xl p-6 transition-all duration-200 hover:scale-105 hover:shadow-lg",
+        "wide:w-full tall:h-full aspect-square rounded-xl p-6 transition-all duration-50 hover:scale-115 hover:shadow-lg active:scale-108",
       )}
     >
       <div className="flex justify-center">
@@ -28,10 +45,10 @@ export const ButtonEntry = (props: ButtonEntryProps) => {
       <button
         className="relative flex size-full items-center gap-2 rounded-lg text-white"
         type="button"
-        onClick={props.onClick}
+        onClick={handleClick}
       >
         {superscriptIcon && (
-          <div className="absolute -right-3 -bottom-3 size-4">
+          <div className="absolute -right-4 bottom-0 size-4">
             <ContainedImage src={superscriptIcon} alt={"Superscript Icon"} />
           </div>
         )}

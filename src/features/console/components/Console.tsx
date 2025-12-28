@@ -1,7 +1,7 @@
-import emailIcon from "@home/assets/email-icon.png";
-import githubIcon from "@home/assets/github-icon.png";
-import linkedinIcon from "@home/assets/linkedin-icon.png";
-import settingsIcon from "@home/assets/settings-icon.svg";
+import darkModeIcon from "@home/assets/icons/dark-mode.svg";
+import emailIcon from "@home/assets/icons/email.png";
+import githubIcon from "@home/assets/icons/github.png";
+import linkedinIcon from "@home/assets/icons/linkedin.png";
 import { Panel } from "@home/features/shared/components/Panel";
 import { cn } from "@home/utils/css/classNames";
 import { ButtonEntryType } from "../types/ButtonEntryType";
@@ -45,8 +45,8 @@ export const Console = (props: { className: string }) => {
           <ButtonEntry
             type={ButtonEntryType.STANDARD}
             label=""
-            icon={settingsIcon}
-            alt="Settings Icon"
+            icon={darkModeIcon}
+            alt="Dark/Light Mode Icon"
             onClick={() => console.log("open settings...")}
           />
         </ConsoleSection>
