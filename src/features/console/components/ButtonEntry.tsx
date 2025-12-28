@@ -9,7 +9,6 @@ type ButtonEntryProps = {
   label: string;
   type: ButtonEntryType;
   icon: string;
-  activeIcon?: string;
   alt: string;
   onClick: () => void;
 };
