@@ -35,7 +35,7 @@ export const ButtonEntry = (props: ButtonEntryProps) => {
     <div
       className={cn(
         props.className,
-        "wide:w-full tall:h-full aspect-square rounded-xl p-6 transition-all duration-50 hover:scale-115 hover:shadow-lg active:scale-108",
+        "wide:w-full tall:h-full wide:p-[.5vw] tall:p-[.35vh] aspect-square rounded-xl transition-all duration-50 hover:scale-115 hover:shadow-lg active:scale-108",
       )}
     >
       <div className="flex justify-center">

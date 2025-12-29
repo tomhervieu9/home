@@ -12,7 +12,7 @@ export const Console = (props: { className: string }) => {
   return (
     <div className={cn(props.className, "relative")}>
       <Panel className="absolute inset-0 -z-10" />
-      <div className="tall:flex-row wide:flex-col flex size-full p-8">
+      <div className="tall:flex-row wide:flex-col flex size-full justify-between">
         <ConsoleSection label="Info">
           <ButtonEntry
             type={ButtonEntryType.LINK}

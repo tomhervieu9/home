@@ -19,10 +19,10 @@ export const ConsoleSection = (
         props.includeHoverAnimation
           ? "transition-all duration-200 hover:scale-105 hover:shadow-lg"
           : "",
-        "rounded-xl p-6",
+        "wide:p-[1vw] tall:p-[.35vh] wide:flex-col tall:flex-row flex gap-3 rounded-xl",
       )}
     >
-      <p className="wide:w-full tall:h-full text-label text-center font-bold">
+      <p className="wide:w-full tall:hidden text-label flex items-center justify-center text-center font-bold">
         {props.label}
       </p>
       {props.children}
