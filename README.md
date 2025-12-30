@@ -12,6 +12,9 @@
 - Enhance the clipboard text copied icon to be an animation with a colored, green check.
 - Switch up the background colors.
 
+- Add briefcase and resume icons to denote work experience and resume info.
+  - when user clicks, icon shoots something to the narration panel which reacts with an emerald green color and gives the details.
+
 # Bugs
 
 - Fix mobile layout for console buttons.
