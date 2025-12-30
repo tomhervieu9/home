@@ -13,6 +13,26 @@ export const Console = (props: { className: string }) => {
     <div className={cn(props.className, "relative")}>
       <Panel className="absolute inset-0 -z-10" />
       <div className="tall:flex-row wide:flex-col flex size-full justify-between">
+        <ConsoleSection label="Content">
+          <ButtonEntry
+            type={ButtonEntryType.NAVIGATION}
+            label="Portfolio Entry 1"
+            alt="Navigate to PortfolioEntry1"
+            href="#portfolio-entry-1"
+          />
+          <ButtonEntry
+            type={ButtonEntryType.NAVIGATION}
+            label="Portfolio Entry 2"
+            alt="Navigate to PortfolioEntry2"
+            href="#portfolio-entry-2"
+          />
+          <ButtonEntry
+            type={ButtonEntryType.NAVIGATION}
+            label="Portfolio Entry 3"
+            alt="Navigate to PortfolioEntry3"
+            href="#portfolio-entry-3"
+          />
+        </ConsoleSection>
         <ConsoleSection label="Info">
           <ButtonEntry
             type={ButtonEntryType.LINK}

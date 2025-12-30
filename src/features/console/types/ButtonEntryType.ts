@@ -11,6 +11,11 @@ export enum ButtonEntryType {
   COPY_TEXT,
 
   /**
+   * A button type that navigates to a specific part of the website.
+   */
+  NAVIGATION,
+
+  /**
    * A standard button type.
    */
   STANDARD,

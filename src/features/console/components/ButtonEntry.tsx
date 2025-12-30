@@ -8,9 +8,10 @@ type ButtonEntryProps = {
   className?: string;
   label: string;
   type: ButtonEntryType;
-  icon: string;
+  icon?: string;
   alt: string;
-  onClick: () => void;
+  onClick?: () => void;
+  href?: string;
 };
 
 export const ButtonEntry = (props: ButtonEntryProps) => {
@@ -22,7 +23,7 @@ export const ButtonEntry = (props: ButtonEntryProps) => {
 
   // Use usecallback??
   const handleClick = () => {
-    props.onClick();
+    props.onClick?.();
     if (props.type === ButtonEntryType.COPY_TEXT) {
       setClickReactionActive(true);
       void new Promise((resolve) => setTimeout(resolve, 1000)).then(() =>
@@ -30,6 +31,8 @@ export const ButtonEntry = (props: ButtonEntryProps) => {
       );
     }
   };
+
+  const isLink = props.type === ButtonEntryType.NAVIGATION;
 
   return (
     <div
@@ -41,18 +44,22 @@ export const ButtonEntry = (props: ButtonEntryProps) => {
       <div className="flex justify-center">
         <span>{props.label}</span>
       </div>
-      <button
-        className="relative flex size-full items-center gap-2 rounded-lg text-white"
-        type="button"
-        onClick={handleClick}
-      >
-        {superscriptIcon && (
-          <div className="absolute -right-4 bottom-0 size-4">
-            <ContainedImage src={superscriptIcon} alt={"Superscript Icon"} />
-          </div>
-        )}
-        <ContainedImage src={props.icon} alt={props.alt} />
-      </button>
+      {isLink ? (
+        <a href={props.href}>hello thar</a>
+      ) : (
+        <button
+          className="relative flex size-full items-center gap-2 rounded-lg text-white"
+          type="button"
+          onClick={handleClick}
+        >
+          {superscriptIcon && (
+            <div className="absolute -right-4 bottom-0 size-4">
+              <ContainedImage src={superscriptIcon} alt={"Superscript Icon"} />
+            </div>
+          )}
+          <ContainedImage src={props.icon ?? ""} alt={props.alt} />
+        </button>
+      )}
     </div>
   );
 };

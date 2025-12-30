@@ -12,7 +12,7 @@ export const getIconForButtonEntryType = (
       return isActive ? copiedIcon : clipboardIcon;
     case ButtonEntryType.LINK:
       return linkIcon;
-    case ButtonEntryType.STANDARD:
+    default:
       return undefined;
   }
 };

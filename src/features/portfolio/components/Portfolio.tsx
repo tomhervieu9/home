@@ -11,12 +11,12 @@ export const Portfolio = (props: { className: string }) => {
         className="pointer-events-none absolute inset-0 z-10"
         withoutBackground={true}
       />
-      <div className="scrollbar-none size-full overflow-auto p-8">
-        <PortfolioEntry />
+      <div className="scrollbar-none size-full scroll-p-8 overflow-auto scroll-smooth p-8">
+        <PortfolioEntry id="portfolio-entry-1" />
         <PortfolioEntryDivider />
-        <PortfolioEntry />
+        <PortfolioEntry id="portfolio-entry-2" />
         <PortfolioEntryDivider />
-        <PortfolioEntry />
+        <PortfolioEntry id="portfolio-entry-3" />
       </div>
     </div>
   );
