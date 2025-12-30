@@ -7,7 +7,12 @@ export const Narration = (props: { className?: string }) => {
   );
 
   return (
-    <div className={cn(props.className, "wrap-break-word whitespace-pre-line")}>
+    <div
+      className={cn(
+        props.className,
+        "size-full overflow-auto text-[12px] wrap-break-word whitespace-pre-line",
+      )}
+    >
       {text}
     </div>
   );
