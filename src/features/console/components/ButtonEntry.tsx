@@ -41,14 +41,21 @@ export const ButtonEntry = (props: ButtonEntryProps) => {
         "wide:w-full tall:h-full wide:p-[.5vw] tall:p-[.35vh] aspect-square rounded-xl transition-all duration-50 hover:scale-115 hover:shadow-lg active:scale-108",
       )}
     >
-      <div className="flex justify-center">
-        <span>{props.label}</span>
-      </div>
+      {!isLink && (
+        <div className="flex justify-center">
+          <span>{props.label}</span>
+        </div>
+      )}
       {isLink ? (
-        <a href={props.href}>hello thar</a>
+        <a
+          className="inline-block size-full text-[12px] wrap-break-word whitespace-pre-line"
+          href={props.href}
+        >
+          {props.label}
+        </a>
       ) : (
         <button
-          className="relative flex size-full items-center gap-2 rounded-lg text-white"
+          className="relative flex size-full cursor-pointer items-center gap-2 rounded-lg text-white"
           type="button"
           onClick={handleClick}
         >
