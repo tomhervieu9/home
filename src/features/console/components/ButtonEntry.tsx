@@ -48,7 +48,7 @@ export const ButtonEntry = (props: ButtonEntryProps) => {
       )}
       {isLink ? (
         <a
-          className="inline-block size-full text-[12px] wrap-break-word whitespace-pre-line"
+          className="inline-block size-full text-[14px] wrap-break-word whitespace-pre-line"
           href={props.href}
         >
           {props.label}
